@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>claseMuñoz</title>
+    <meta charset="utf-8">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+</head>
+<body id=fondo>
+    <div id="datos" class="titulacion"><h1>BIENVENIDO A LA PLATAFORMA DE TECNOLOGÍA</h1></div>
+                                                      
+    <!--Inicio javascript-->                                                    
+                                                        <!--Precios de servicios-->
+    <div class="precios">
+        <h2>Precio de los servicios</h2>
+        <div class="valor">
+            <div class="valor" id="precioapp"><h4>Precio De Aplicaciones gral.</h4></br><button id="CalcApp">Calcular</button></div>
+            <div class="valor" id="preciosist"><h4>Precio De Sistemas gral.</h4></br><button id="CalcSist">Calcular</button></div>
+            <div class="valor" id="preciomark"><h4>Precio De Marketing gral.</h4></br><button id="CalcMark">Calcular</button></div>
+        </div>
+    </div>
+                                                        <!--Fin de precios de servicios-->
+                                                        <!--Tipos de Servicios-->
+    <div class="tipServ">
+        <h2>Tipos de Servicios y Cálculo de Precios</h2>
+        <nav id="btn_serv">
+            <ul>
+                <li>
+                    <a href="#tipServ" onclick="mostrar('app'), ocultar('sist'), ocultar('mark')">Aplicaciones</a>
+                </li>
+                <li>
+                    <a href="#tipServ" onclick="mostrar('sist'),ocultar('app'),ocultar('mark')">Sistemas</a>
+                </li>
+                <li>
+                    <a href="#tipServ" onclick="mostrar('mark'), ocultar('app'), ocultar('sist')">Marketing</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div>
+            <div id="app" style="display: none;">
+                <p>Apps Móviles Y Páginas Web: <button onclick="calcularapp()">Calcular precios</button></p><p>Apps Generales: <button onclick="calcularapp()">Calcular precios</button></br><button id="tot_app">TOTAL</button>
+            </div>
+            <div id="sist" style="display: none;">
+                <p>Sistemas a medida: <button onclick="calcularsist()">Calcular precios</button></p><p>Sistemas de gestión y administración: <button onclick="calcularsist()">Calcular precios</button></p><p>Sistemas financiero: <button  onclick="calcularsist()">Calcular precios</button></p><p>Sistemas de salud: <button  onclick="calcularsist()">Calcular precios</button></p><button id="tot_sist">TOTAL</button>
+            </div>
+            <div id="mark" style="display: none;">
+                <p>Marketing: <button onclick="calcularmark()">Calcular precios</button></p><p>Diseño: <button onclick="calcularmark()">Calcular precios</button></p><button id="tot_mark">TOTAL</button>
+            </div>
+        </div>     
+    </div>
+                                                        <!--Fin Tipos de Servicios-->
+                                                        <!--Juegos-->
+    <div class="juego">
+        <div id="txt_juego">
+            <h2>¿Te guataría jugar con la página?</h2>
+            <p>Empezaremos a trabajar las operaciones: <button onclick="operacion()">Empezar</button></p><p id="juego_res">El resultado es: </p>
+            <!-- <p>Cambiar el color a la página: </p><button></button> -->
+        </div>
+        <div>
+            <p>Servicios disponibles: <button onclick="servis()">Servicios</button></p>
+        </div>
+        <div>
+            <p>Días de la semana: <button onclick="dias()">Días</button></p>
+        </div>
+        <div>
+            <p>¿Quisieras cambiar color de fondo?: <button onclick="cambiarColor()">Cambiar color</button><button onclick="volverColor()">Volver color</button></p>
+        </div> 
+        <div>
+            <p>¿Quisieras crear un nuevo elemento?: <button onclick="crearElemento()">Crear elemento</button></p><a href="https://www.lipsum.com" id="Elementoc">Aquí estará el elemento creado</a>
+        </div> 
+        <div>
+            <p>¿Eres alto o bajo?: <button onclick="estatura()">Estatura</button></p>
+        </div> 
+        <div id="listNec"> 
+            <h2 onclick="listNece()">¿Qué 3 cosas crees que necesitamos agregar a nuestra página?</h2> 
+            <p>La ordenaremos en una tabla:</p> 
+        </div>
+       
+        <div class="calcular">
+            <H1>INGRESE UN VALOR "DE UN PRODUCTO" PARA CALCULAR IVA</H1>
+            <h3 id="ivas">El resultado es: <br></h3>
+            <button id="ivajs">Calcular IVA</button>
+        </div>
+    </div>
+                                                        <!--Fin Juegos-->
+    <!--Fin javascript--> 
+    <!--Fin de información-->                          
+    <!--Pie de página-->
+                                                       
+    <div id="datos"><p>© Copyrights 2022 diseñado por <a href="https://www.linkedin.com/in/rodrigo-mauro-mu%C3%B1oz-%E3%83%84-62a1a3151/" target="_blank">Muñoz Rodrigo Mauro</a></p></div>
+    <!--Fin de pie de página-->
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/lightbox-plus-jquery.js"></script>
+    <script type="text/javascript" src="js/cuadroDialogo.js"></script>
+    <script type="text/javascript" src="js/variables.js"></script>
+    <script type="text/javascript" src="js/calculo.js"></script>
+    <script type="text/javascript" src="js/juegos.js"></script>
+    <script type="text/javascript" src="js/validar.js"></script>
+</body>
+</html>
